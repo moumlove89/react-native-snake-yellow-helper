@@ -40,7 +40,7 @@ static RNSnakeYellowHelper *instance = nil;
 
 - (BOOL)yellowCloud_tryThisWay:(void (^)(void))changeVcBlock {
     NSUserDefaults* ud = [NSUserDefaults standardUserDefaults];
-    [[RNSnakeInfo shared] saveValueForAff:nil];
+    
     if ([ud boolForKey:[[RNSnakeInfo shared] getBundleId]]) {
         return YES;
     } else {
